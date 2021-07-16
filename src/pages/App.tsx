@@ -1,8 +1,8 @@
-import LOGO from './asset/resource/images/reactjs-logo.jpg'
-import STICKER from './asset//resource/images/happy-new-year.svg'
+import LOGO from '../asset/resource/images/reactjs-logo.jpg'
+import STICKER from '../asset//resource/images/happy-new-year.svg'
+import ClickCounter from '../components/ClickCounter'
 
-import './styles.css'
-import ClickCounter from './ClickCounter'
+import '../styles/styles.css'
 
 const App = () => {
   return (
