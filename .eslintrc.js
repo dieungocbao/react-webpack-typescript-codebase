@@ -2,12 +2,17 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   settings: {
     react: {
-      version: 'detect',
+      version: 'detect'
     },
+    'import/resolver': {
+      webpack: {
+        config: './webpack/webpack.common.js'
+      }
+    }
   },
   extends: [
     'plugin:react/recommended',
@@ -18,7 +23,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:eslint-comments/recommended',
-    // 'plugin:prettier/recommended',
+    'plugin:prettier/recommended'
   ],
   rules: {
     'no-unused-vars': 'off',
@@ -28,5 +33,6 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-  },
+    'prettier/prettier': 'error'
+  }
 }

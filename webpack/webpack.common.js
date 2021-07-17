@@ -3,13 +3,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, "../src/index.tsx"),
+  entry: path.resolve(__dirname, '../src/index.tsx'),
   output: {
-    path: path.resolve(__dirname, "./build"),
+    path: path.resolve(__dirname, './build'),
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.css', '.scss'],
+    alias: {
+      '@Asset': path.resolve(__dirname, '../src/asset/'),
+      '@Components': path.resolve(__dirname, '../src/components/'),
+      '@Pages': path.resolve(__dirname, '../src/pages/'),
+      '@Services': path.resolve(__dirname, '../src/services/'),
+      '@Styles': path.resolve(__dirname, '../src/styles/')
+    }
   },
   module: {
     rules: [
@@ -32,8 +39,8 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
-      },
+        type: 'asset/resource'
+      }
     ]
   },
 
@@ -42,7 +49,7 @@ module.exports = {
       template: path.resolve(__dirname, '../public/index.html')
     }),
     new CopyPlugin({
-      patterns: [{ from: "source", to: "dest", noErrorOnMissing: true }],
+      patterns: [{ from: 'source', to: 'dest', noErrorOnMissing: true }]
     })
   ]
 }
