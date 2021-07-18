@@ -1,10 +1,8 @@
 import '@Styles/LoginPage.css'
-import ClickCounter from '@Components/ClickCounter'
 
 const Login = () => {
   return (
     <div className="login-page fadeInDown">
-      <ClickCounter />
       <div className="formContent">
         {/* Tabs Titles */}
         <h2 className="active"> Sign In </h2>

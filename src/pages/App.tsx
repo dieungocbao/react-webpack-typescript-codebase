@@ -1,6 +1,6 @@
 import LoginPage from '@Pages/Login'
 
-import '../styles/styles.css'
+import '@Styles/styles.css'
 
 const App = () => {
   return (
