@@ -12,10 +12,12 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', '.jsx', '.css', '.scss'],
     alias: {
       '@Asset': path.resolve(__dirname, '../src/asset/'),
-      '@Components': path.resolve(__dirname, '../src/components/'),
-      '@Pages': path.resolve(__dirname, '../src/pages/'),
-      '@Services': path.resolve(__dirname, '../src/services/'),
-      '@Styles': path.resolve(__dirname, '../src/styles/')
+      '@App': path.resolve(__dirname, '../src/app/'),
+      '@Components': path.resolve(__dirname, '../src/app/components/'),
+      '@Pages': path.resolve(__dirname, '../src/app/pages/'),
+      '@Services': path.resolve(__dirname, '../src/app/services/'),
+      '@Styles': path.resolve(__dirname, '../src/app/styles/'),
+      '@Features': path.resolve(__dirname, '../src/app/features/'),
     }
   },
   module: {

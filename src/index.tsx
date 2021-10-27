@@ -1,4 +1,11 @@
-import ReactDOM from 'react-dom'
-import App from './pages/App'
+import * as ReactDOM from 'react-dom'
+import App from '@Pages/App'
+import { store } from '@App/store'
+import { Provider } from 'react-redux'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)

@@ -5,8 +5,10 @@ const WebpackBar = require('webpackbar')
 module.exports = {
   mode: 'development',
   devServer: {
-    hot: true
+    hot: true,
+    port: process.env.PORT || 3000,
   },
+  stats: 'errors-only',
   devtool: 'cheap-module-source-map',
   plugins: [
     new webpack.DefinePlugin({

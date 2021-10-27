@@ -49,10 +49,12 @@
     "paths": {
       "@": ["./"],
       "@Asset/*": ["./asset/*"],
-      "@Components/*": ["./components/*"],
-      "@Pages/*": ["./pages/*"],
-      "@Services/*": ["./services/*"],
-      "@Styles/*": ["./styles/*"]
+      "@App/*": ["./app/*"],
+      "@Components/*": ["./app/components/*"],
+      "@Pages/*": ["./app/pages/*"],
+      "@Services/*": ["./app/services/*"],
+      "@Styles/*": ["./app/styles/*"],
+      "@Features/*": ["./app/features/*"]
     } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                             /* List of folders to include type definitions from. */
@@ -77,6 +79,6 @@
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "images.d.ts"],
+  "include": ["src/**/*", "images.d.ts", "types/images.d.ts"],
   "exclude": ["node_modules", "dist", "public", "build"]
 }
